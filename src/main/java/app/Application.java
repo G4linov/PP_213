@@ -5,6 +5,10 @@ import app.model.AnimalsCage;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -14,6 +18,10 @@ public class Application {
             AnimalsCage bean =
                     applicationContext.getBean(AnimalsCage.class);
             bean.whatAnimalSay();
+            System.out.println("Время в таймере:");
+            bean.printTime();
+            System.out.println("________________________");
+
         }
     }
 
